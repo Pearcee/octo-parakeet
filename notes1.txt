@@ -1,0 +1,59 @@
+docker-compose exec backend sh
+python manage.py makemigrations && python manage.py migrate
+python manage.py createsuperuser
+docker-compose up
+
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip freeze > requirements.txt
+
+
+pip install -r requirements.txt
+./manage.py migrate
+./manage.py createsuperuser
+./manage.py runserver
+
+python -m venv env
+pip install --upgrade pip
+pip install django
+pip install mysql-connector-python mysqlclient psutil python-dotenv
+
+django-admin startproject django_blog
+python manage.py runserver
+
+python manage.py startapp blog
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+django-admin startproject personal_portfolio
+
+mkdir hello_world/templates/
+touch hello_world/templates/hello_world.html
+
+touch hello_world/urls.py
+
+mkdir personal_portfolio/templates/
+touch personal_portfolio/templates/base.html
+
+mkdir projects/templates/
+touch projects/templates/project_index.html
+
+python manage.py shell  
+from projects.models import Project
+p1 = Project(
+     title='My First Project',
+     description='A web development project.',
+     technology='Django',
+     image='img/project1.png'
+ )
+p1.save()
+
+python manage.py startapp blog
+
+django-admin startproject mycalendar
+cd mycalendar
+python manage.py startapp events
+
