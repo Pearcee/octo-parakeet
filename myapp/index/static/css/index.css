@@ -1,0 +1,15 @@
+/* Full height image header */
+h1 {
+    color: black;
+    -webkit-text-fill-color: white;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.bg-img-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/static/images/background.jpg");
+    height: 100%;
+}

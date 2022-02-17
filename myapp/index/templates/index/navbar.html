@@ -1,18 +1,9 @@
-<div class="w3-container">
-    <h2>Responsive navbar with responsive dropdown</h2>
-    <p>Resize the browser window to see the result:</p>
 
-    <div class="w3-bar w3-black">
-        <a href="#" class="w3-bar-item w3-button w3-mobile w3-gray">Home</a>
-        <a href="#" class="w3-bar-item w3-button w3-mobile">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>
-        <div class="w3-dropdown-hover w3-mobile">
-            <button class="w3-button">Dropdown =</i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-                <a href="#" class="w3-bar-item w3-button w3-mobile">Link 1</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile">Link 3</a>
-            </div>
-        </div>
-    </div>
+<div class="w3-container  w3-mobile w3-white">
+    {% with 'index home about links contact server location' as list %}
+        {% for i in list.split %}
+            <a href="/{{ i }}" class="w3-bar-item w3-button">{{ i |capfirst}}</a>
+        {% endfor %}
+    {% endwith %}
 </div>
+<br>
