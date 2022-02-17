@@ -1,0 +1,9 @@
+<footer class="w3-center w3-black w3-bottom ">
+    {% with 'facebook instagram linkedin snapchat twitter w3schools' as list %}
+        {% for i in list.split %}
+                <a href="https://www.{{ i }}.com/" title="{{ i }}" target="_blank" rel="noopener"> <img
+                        src="/static/svg/{{ i }}.svg" style="width:25px;height:25px;" alt="Design"
+                        class="w3-white w3-hover-opacity "> </a>
+        {% endfor %}
+    {% endwith %}
+</footer>
