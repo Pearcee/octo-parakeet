@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="preload" href="{% static 'css/w3.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <link rel="preload" href="{% static 'css/w3.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
     <link rel="preload" href="{% static 'css/index.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <!-- <link rel="preload" href="{% static 'css/clock.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <meta name="description" content="Description." />
     <title>{% block title %}{% endblock %}</title>
@@ -23,7 +24,9 @@
 
     <!-- Footer -->
     {% include 'index/footer.html' with brand_name=brand_name %}
-    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <!-- <script type="text/javascript" src="{% static 'js/index.js' %}"></script> -->
+    <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/clock.js' %}"></script>
 
   </body>
 </html>

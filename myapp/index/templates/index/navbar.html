@@ -1,9 +1,17 @@
-
-<div class="w3-container  w3-mobile w3-white">
-    {% with 'index home about links contact server location' as list %}
+{% with 'index home about links contact server location clock' as list %}
+    <div class="w3-bar w3-white">
+        <a href="#" class="w3-bar-item w3-button">Home</a>
         {% for i in list.split %}
-            <a href="/{{ i }}" class="w3-bar-item w3-button">{{ i |capfirst}}</a>
+        <a href="/{{ i }}" class="w3-bar-item w3-button w3-hide-small">{{ i |capfirst}}</a>
         {% endfor %}
-    {% endwith %}
-</div>
-<br>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+            onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+            {% for i in list.split %}
+            <a href="/{{ i }}" class="w3-bar-item w3-button ">{{ i |capfirst}}</a>
+            {% endfor %}       
+    </div>
+{% endwith %}
+<!-- menu-1214315.svg -->

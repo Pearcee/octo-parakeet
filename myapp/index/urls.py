@@ -10,4 +10,5 @@ urlpatterns = [
     path("links", views.index_links, name="index_links"),
     path("location", views.index_location, name="index_location"),
     path("server", views.index_server, name="index_server"),
+    path("clock", views.index_clock, name="index_clock"),
 ]

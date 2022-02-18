@@ -13,3 +13,12 @@ h1 {
     background-image: url("/static/images/background.jpg");
     height: 100%;
 }
+
+#clock {
+    font-family: 'Orbitron', sans-serif;
+    color: #66ff99;
+    font-size: 56px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

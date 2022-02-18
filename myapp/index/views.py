@@ -25,3 +25,6 @@ def index_links(request):
 
 def index_server(request):
     return render(request, "index/server.html")
+
+def index_clock(request):
+    return render(request, "index/clock.html")
