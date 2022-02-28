@@ -19,7 +19,7 @@ load_dotenv('.env')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-user = os.environ['USER']
+# user = os.environ['USER']
 
 SECRET_KEY = os.getenv('SECRET')
 
