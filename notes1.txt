@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ./manage.py migrate
 ./manage.py createsuperuser
 ./manage.py runserver
-python manage.py collectstatic
+l
 
 python -m venv env
 pip install --upgrade pip
