@@ -1,33 +1,41 @@
-{% extends "index/base.html" %} {% block title %} blog {% endblock %} 
+{% extends "blog/post_base.html" %} 
+{% block content %}
+<div >
+  <h2>Card Content</h2>
+  <p>Add containers inside the card to create different sections:</p>
 
-{% block page_content %}
-<h1>Blog
+  {% for post in posts %}
 
-<a href="{% url 'post_new' %}" title="pos new" target="_blank" rel="noopener">
-  <img
-    src="/static/svg/add-new-1214356.svg"
-    style="width: 32px; height: 32px"
-    alt="add-new"
-    class="w3-white w3-right w3-hover-opacity"
-  />
-</a>
+  <article class="w3-card-4" >
+    <header class="w3-container ">
+      <time>published: {{ post.published_date }}</time>
+      {% if user.is_authenticated %}
+      <a
+        href="{% url 'post_edit' pk=post.pk %}"
+        title="pos new"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="/static/svg/pencil-1214304.svg"
+          style="width: 32px; height: 32px"
+          alt="add-new"
+          class="w3-white w3-right w3-hover-opacity"
+        />
+      </a>
+      {% endif %}
+    </header>
 
+    <div class="w3-container w3-gray">
+      <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+    </div>
 
-</h1>
-{% for post in posts %}
-<article>
-  <a href="{% url 'post_edit' pk=post.pk %}" title="pos new" target="_blank" rel="noopener">
-    <img
-      src="/static/svg/pencil-1214304.svg"
-      style="width: 32px; height: 32px"
-      alt="add-new"
-      class="w3-white w3-right w3-hover-opacity"
-    />
-  </a>
-  <time>published: {{ post.published_date }}</time>
-  <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-  <p>{{ post.text|linebreaksbr }}</p>
-</article>
-{% endfor %} 
+    <footer class="w3-container w3-blue">
+      <p>{{ post.text|linebreaksbr }}</p>
+    </footer>
+</p>
+  </article>
+  {% endfor %} 
+  </div>
+  {% endblock %}
 
-{% endblock %}

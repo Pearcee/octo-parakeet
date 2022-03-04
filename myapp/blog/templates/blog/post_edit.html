@@ -1,8 +1,7 @@
-{% extends "index/base.html" %}
-{% block title %} blog {% endblock %}
+{% extends "blog/post_base.html" %}
 
-{% block page_content %}
-    <h1>Blog</h1>
+{% block content %}
+    <h1>Blog Edit</h1>
     <h2>New post</h2>
         <form method="POST" class="post-form">{% csrf_token %}
             {{ form.as_p }}

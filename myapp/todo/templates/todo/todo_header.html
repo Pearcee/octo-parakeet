@@ -1,0 +1,12 @@
+{% block page_content %}
+<div class="w3-bar w3-white w3-large">
+    <a href="{% url 'post_list' %}" class="w3-bar-item w3-button w3-pink">me todo</a>
+    {% if user.is_authenticated %}
+
+    <a href="#" class="w3-bar-item w3-button w3-right" title="New Post"><img src="/static/svg/add-new-1214356.svg" style="width:9%" alt="add-new"
+        class="w3-white w3-right w3-hover-opacity" /></a>
+
+    {% endif %}
+</div>
+
+{% endblock %}
