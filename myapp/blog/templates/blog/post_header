@@ -1,0 +1,3 @@
+{% block page_content %}
+<h1> me blog </h1>
+{% endblock %}

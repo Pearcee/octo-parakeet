@@ -1,0 +1,33 @@
+{% extends "index/base.html" %} {% block title %} blog {% endblock %} 
+
+{% block page_content %}
+<h1>Blog
+
+<a href="{% url 'post_new' %}" title="pos new" target="_blank" rel="noopener">
+  <img
+    src="/static/svg/add-new-1214356.svg"
+    style="width: 32px; height: 32px"
+    alt="add-new"
+    class="w3-white w3-right w3-hover-opacity"
+  />
+</a>
+
+
+</h1>
+{% for post in posts %}
+<article>
+  <a href="{% url 'post_edit' pk=post.pk %}" title="pos new" target="_blank" rel="noopener">
+    <img
+      src="/static/svg/pencil-1214304.svg"
+      style="width: 32px; height: 32px"
+      alt="add-new"
+      class="w3-white w3-right w3-hover-opacity"
+    />
+  </a>
+  <time>published: {{ post.published_date }}</time>
+  <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+  <p>{{ post.text|linebreaksbr }}</p>
+</article>
+{% endfor %} 
+
+{% endblock %}
