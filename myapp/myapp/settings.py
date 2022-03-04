@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-raworksoti1kt9wx#^0vkrue6o8n@b$1^*)y9ez-sttihl4r^2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.32','127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['p32.holm','192.168.1.32','127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
