@@ -15,6 +15,7 @@ urlpatterns = [
     path('todo/', include('todo.urls')),
     path('weather/', include('weather.urls')),
     path("", include("index.urls")),
+    path("api/", include("api.urls")),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
