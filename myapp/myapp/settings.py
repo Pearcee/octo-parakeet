@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'blog',
     'index',
     'todo',
+    'weather',
+    'testcard',
 ]
 
 MIDDLEWARE = [

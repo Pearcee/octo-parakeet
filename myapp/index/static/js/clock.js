@@ -8,7 +8,7 @@ function currentTime() {
   var sec = date.getSeconds();
   hour = updateTime(hour);
   min = updateTime(min);
-  sec = updateTime(sec);
+  // sec = updateTime(sec);
   month = updateTime(month);
   day = updateTime(day);
   document.getElementById("clock").innerText =
@@ -20,9 +20,9 @@ function currentTime() {
     "  " +
     hour +
     ":" +
-    min +
-    ":" +
-    sec; /* adding time to the div */
+    min 
+    // ":" +
+    // sec; /* adding time to the div */
   var t = setTimeout(function () {
     currentTime();
   }, 1000); /* setting timer */
