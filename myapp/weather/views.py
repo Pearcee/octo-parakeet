@@ -12,7 +12,7 @@ url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&un
 
 def index(request):
     # form = CityForm()
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=4c5f8b1c31d44834bff023a27c308ef9'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=apikey'
     cities = City.objects.all() #return all the cities in the database
 
     if request.method == 'POST': # only true if form is submitted
