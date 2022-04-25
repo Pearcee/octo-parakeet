@@ -1,11 +1,12 @@
 from django.shortcuts import render
 import requests
+import os
 from .models import City
 from .forms import CityForm
 
 
 
-api_key = "apikey"
+api_key = os.getenv('api_key_weather') 
 lat = "55.181950"
 lon = "-2.810358"
 url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)

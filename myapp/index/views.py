@@ -28,3 +28,6 @@ def index_server(request):
 
 def index_clock(request):
     return render(request, "index/clock.html")
+
+def index_todo(request):
+    return render(request, "index/todo.html")

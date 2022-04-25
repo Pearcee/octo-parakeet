@@ -4,7 +4,7 @@
   <div class="w3-dropdown-hover w3-mobile">
     <button class="w3-button">Site<i class="fa fa-caret-down"></i></button>
     <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-      {% with 'about clock contact index  links location server ' as list %} 
+      {% with 'about clock contact index  links location server atodo' as list %} 
         {% for item in list.split %}
             <a href="/{{ item }}" class="w3-bar-item w3-button w3-mobile">{{ item |capfirst}}</a>
         {% endfor %} 

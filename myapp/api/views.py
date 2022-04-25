@@ -34,6 +34,13 @@ def getTodo (request):
         items = Todo.objects.all()
         serializer = TodoSerializer(items, many=True)
         return Response(serializer.data)    
+    
+@api_view(['GET'])
+def getTodoDetail (request, pk):
+    if request.method == 'GET':
+        items = Todo.objects.get(pk)
+        serializer = TodoSerializer(items, many=False)
+        return Response(serializer.data)      
  
 @api_view(['POST'])
 def addTodo (request):
@@ -44,3 +51,12 @@ def addTodo (request):
             return Response(serializer.data)
         return Response(serializer.errors)   
     
+@api_view(['POST'])
+def updateTodo (request, pk):
+    if request.method == 'POST':
+        items = Todo.objects.get(id=pk)
+        serializer = TodoSerializer( instance=items ,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)       
